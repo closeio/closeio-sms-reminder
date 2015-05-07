@@ -26,7 +26,7 @@ rake db:create db:migrate db:seed
 
 # Test:
 
-Run "rspec" on the root directory
+Run "rspec" in the root directory
 
 # Services used:
 
