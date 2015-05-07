@@ -1,13 +1,13 @@
-Closeio Sms Reminder is an app that fetch every 10 minutes the Close.io database of your account looking for tasks that belongs to a Lead with a valid Mobile number or Email address.
+Closeio Sms Reminder is an app that let you fetch  your Close.io database every 10 minutes and that sends SMS and Email reminders to your customers. 
 
-It sends an iCal invitation and an SMS reminder to your Leads with which you will have a meeting.
+It sends an iCal invitation and an SMS reminder to your Leads with which you will have a meeting. 
 
 # Example:
 
 In case you create a task containing a specific keyword (in our case is "[Meeting]"),
 Closeio Sms Reminder will instantly send an email containing the iCal invitation to the customer and, one hour before the meeting, it will also send and SMS reminder.
 
-To make it working your Task in Close.io must contain a Keyword, the Lead must have a valid phone number set to "mobile" or a valid email address.
+If your Task in Close.io contains a specific Keyword and the Lead has have a valid phone number set to "mobile" or a valid email address, than the reminder will be sent out.
 
 
 # Configuration:
@@ -28,7 +28,7 @@ rake db:create db:migrate db:seed
 
 Run "rspec" on the root directory
 
-# Services userd:
+# Services used:
 
 - NEXMO API
 - CLOSEIO API
