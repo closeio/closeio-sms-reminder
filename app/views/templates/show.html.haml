@@ -1,0 +1,10 @@
+%p
+  %b Template:
+  //dont change the div ID below or ajax will stop loading them
+  #ContentArea= @template.template
+%p
+  %b Name:
+  = @template.name
+= link_to 'Edit', edit_template_path(@template)
+\|
+= link_to 'Back', templates_path

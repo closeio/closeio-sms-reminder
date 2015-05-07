@@ -1,0 +1,9 @@
+= semantic_form_for @reminder do |f|
+  = f.inputs do
+    = f.input :name, "ng-model" => "name"
+    = f.input :template
+    = f.input :message, :input_html => { :maxlength => 160 }, :hint => 'Max 160 characters'
+    = f.input :phonenumber, :required => true
+
+  = f.actions do
+    = f.action :submit, :as => :input

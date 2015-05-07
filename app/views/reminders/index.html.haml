@@ -1,0 +1,26 @@
+%br
+= link_to 'New template', new_template_path, :class => "btn btn-primary"
+%table{:class => "table table-hover"}
+  %thead
+    %tr
+      %th Name
+      %th Message
+      %th Phonenumber
+      %th Appointment
+      %th Nexmo
+
+  %tbody
+    - @reminders.each do |reminder|
+      %tr
+        %td= reminder.name
+        %td= reminder.message
+        %td= truncate(reminder.phonenumber, length: 10, omission: '***')
+        %td= reminder.appointment
+        %td
+          - if reminder.sent
+            .sms_sent
+          - else
+            .sms_queued
+        %td= link_to 'Show', reminder
+= will_paginate @reminders
+

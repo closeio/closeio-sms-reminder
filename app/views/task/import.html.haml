@@ -1,0 +1,35 @@
+%h1 Task imported today from Close.io
+
+= DateTime.now
+%br
+%br
+%table{:class => "table table-hover"}
+  %thead
+    %tr
+      %th Phone
+      %th Lead
+      %th Task
+      %th Name
+      %th Due
+      %th Email
+      %th Completed
+      %th Processed
+  %tbody
+    - @imported_today.each do |task|
+      %tr
+        %td= truncate(task.phone, length: 10, omission: '***')
+        %td= truncate(task.lead_id, length: 15, omission: '...')
+        %td= truncate(task.task_id, length: 15, omission: '...')
+        %td= task.ref_name
+        %td= task.due_date
+        %td= task.email
+        %td
+          - if task.is_complete
+            .sms_sent
+          - else
+            .sms_queued
+        %td
+          - if task.processed
+            .sms_sent
+          - else
+            .sms_queued
