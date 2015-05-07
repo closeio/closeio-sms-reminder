@@ -4,7 +4,7 @@ Closeio Sms Reminder is an app that fetch every 10 minutes the Close.io database
 
 It sends an iCal invitation and an SMS reminder to your Leads with which you will have a meeting.
 
-* Example:
+# Example:
 
 In case you create a task containing a specific keyword (in our case is "[Meeting]"),
 Closeio Sms Reminder will instantly send an email containing the iCal invitation to the customer and, one hour before the meeting, it will also send and SMS reminder.
@@ -12,7 +12,7 @@ Closeio Sms Reminder will instantly send an email containing the iCal invitation
 To make it working your Task in Close.io must contain a Keyword, the Lead must have a valid phone number set to "mobile" or a valid email address.
 
 
-* Configuration:
+# Configuration:
 
 Wha will you need to run Closeio Sms Reminder:
 
@@ -22,22 +22,22 @@ Wha will you need to run Closeio Sms Reminder:
 
 Set the config variables in database.yml and secrets.yml
 
-* Than run:
+# Than run:
 
 rake db:create db:migrate db:seed
 
-* Test:
+# Test:
 
 Run "rspec" on the root directory
 
-* Services userd:
+# Services userd:
 
 - NEXMO API
 - CLOSEIO API
 - DELAYED JOB GEM
 - CLOCKWORK
 
-* Deployment instructions
+# Deployment instructions
 
 1. Clone the repo locally
 2. Run "rake db:migrate db:seed"
@@ -46,7 +46,7 @@ Run "rspec" on the root directory
 5. Run "bundle exec clockwork lib/clock.rb" to make it working locally
 
 
-* How to use the app:
+# How to use the app:
 
 1. Set up the application and run "bundle exec clockwork lib/clock.rb"
 2. Create a new Lead in CLose.io with a phonenumber set to "Mobile" and a valid a email address
