@@ -1,5 +1,3 @@
-== README
-
 Closeio Sms Reminder is an app that fetch every 10 minutes the Close.io database of your account looking for tasks that belongs to a Lead with a valid Mobile number or Email address.
 
 It sends an iCal invitation and an SMS reminder to your Leads with which you will have a meeting.
